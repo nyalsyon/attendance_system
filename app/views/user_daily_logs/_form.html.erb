@@ -1,0 +1,32 @@
+<%= form_for(user_daily_log) do |f| %>
+  <% if user_daily_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_daily_log.errors.count, "error") %> prohibited this user_daily_log from being saved:</h2>
+
+      <ul>
+      <% user_daily_log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :log_date %>
+    <%= f.date_select :log_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :log_time %>
+    <%= f.time_select :logtime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :remarks %>
+    <%= f.text_area :remarks %>
+  </div>
+
+  <div class="actions" >
+    <%= f.submit %>
+  </div>
+<% end %>

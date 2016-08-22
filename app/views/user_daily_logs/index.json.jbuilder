@@ -1,0 +1,1 @@
+json.array! @user_daily_logs, partial: 'user_daily_logs/user_daily_log', as: :user_daily_log

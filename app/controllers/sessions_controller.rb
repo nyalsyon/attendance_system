@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       flash[:success] = "you are succesfully login"
-      redirect_to user_path(user)
+      redirect_to user_daily_log_path(user)
     else
       render 'new'
       flash.now[:danger] = "please enter valid username and password"
@@ -15,5 +15,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    session[:user_id]=nil
+
   end
 end

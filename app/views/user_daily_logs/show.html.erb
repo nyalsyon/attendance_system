@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Log date:</strong>
+  <%= @user_daily_log.log_date %>
+</p>
+
+<p>
+  <strong>Logtime:</strong>
+  <%= @user_daily_log.logtime %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @user_daily_log.remarks %>
+</p>
+
+<%= link_to 'Edit', edit_user_daily_log_path(@user_daily_log) %> |
+<%= link_to 'Back', user_daily_logs_path %>

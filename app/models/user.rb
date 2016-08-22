@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :user_daily_logs
     validates :name,
     presence: true
     validates :username,
